@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio - Home</title>
+  <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+  <link rel="stylesheet" href="{{ url_for('static',filename = 'css/mystyle.css') }}"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  
+</head>
+<body>
+
+  <!--top bar-->
+  <div class="topnav" id="myTopnav">
+    <a href="#home" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#education">Education</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#contact">Contact</a>
+    
+    <a href="#home" class="portfolio">MyPortfolio</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+  
+ <section class="hero" id="home">
+  <!-- Animated background layers -->
+  <div class="bg-layer wave1"></div>
+  <div class="bg-layer wave2"></div>
+  <div class="bg-layer glow"></div>
+
+  <div class="hero-content">
+    <h1 class="reveal">
+      Hi, I'm <span>Athira</span>
+    </h1>
+
+    <p class="reveal delay">
+      An aspiring developer passionate about building clean, modern web applications
+      and solving real-world problems through code.
+    </p>
+
+    <a href="#projects" class="md-btn ripple">
+      View My Projects
+    </a>
+  </div>
+</section>
+
+  <!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+  <div class="about-content">
+    <h2 class="about-title reveal">About Me</h2>
+    <p class="aboutp reveal delay">
+      I’m an MCA student with a strong passion for technology and problem-solving. 
+      I enjoy building clean, user-friendly applications and exploring new tools that help me improve as a developer.
+      I love learning, experimenting with modern technologies, and applying my knowledge through real-world projects. 
+      My goal is to create meaningful digital experiences that blend creativity with functionality, while continuously growing my skills as a tech professional.
+    </p>
+  </div>
+
+  <!-- Decorative Material Circles -->
+  <div class="about-circle circle1"></div>
+  <div class="about-circle circle2"></div>
+</section>
+
+
+
+<!-- SKILLS SECTION -->
+<section id="skills" class="skills-section">
+  <div class="skills-container">
+    <h2>Skills</h2>
+
+    <div class="skills-category">
+      <h3>Programming Languages</h3>
+      <div class="skills-grid">
+        <div class="skill-box"><i class="fa-brands fa-python"></i> Python</div>
+        <div class="skill-box"><i class="fa-brands fa-js"></i> JavaScript</div>
+        <div class="skill-box"><i class="fa-solid fa-c"></i> C</div>
+        <div class="skill-box"><i class="fa-brands fa-java"></i> Java</div>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Web Development</h3>
+      <div class="skills-grid">
+        <div class="skill-box"><i class="fa-brands fa-html5"></i> HTML</div>
+        <div class="skill-box"><i class="fa-brands fa-css3-alt"></i> CSS</div>
+        <div class="skill-box"><i class="fa-brands fa-php"></i> PHP</div>
+        <div class="skill-box"><i class="fa-solid fa-flask"></i> Flask</div>
+        <div class="skill-box"><i class="fa-brands fa-python"></i> Django</div>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Databases</h3>
+      <div class="skills-grid">
+        <div class="skill-box"><i class="fa-solid fa-database"></i> MySQL</div>
+      </div>
+    </div>
+
+    <div class="skills-category">
+      <h3>Tools & Version Control</h3>
+      <div class="skills-grid">
+        <div class="skill-box"><i class="fa-brands fa-git-alt"></i> Git</div>
+        <div class="skill-box"><i class="fa-brands fa-github"></i> GitHub</div>
+        <div class="skill-box"><i class="fa-solid fa-code"></i> VS Code</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--PROJECT SECTION-->
+<section id="projects" class="projects-section">
+  <h2 class="section-title">Projects</h2>
+
+  <div class="projects-grid">
+
+    <!-- Project Card 1 -->
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='images/tt1.png') }}"
+           class="project-preview"
+           onclick="openGallery(['tt1.png','tt2.png','tt3.png','tt4.png'])"
+           alt="ToyTrove Preview">
+
+      <div class="project-content">
+        <h3>ToyTrove</h3>
+        <p>
+          A full-fledged e-commerce platform for toys and gifts with
+          role-based access for Customers, Staff, Courier, and Admin.
+        </p>
+        <span class="tech-stack">Flask • HTML • CSS • JS • MySQL</span>
+      </div>
+    </div>
+
+    <!-- Project Card 2 -->
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='images/tn1.png') }}"
+           class="project-preview"
+           onclick="openGallery(['tn1.png','tn2.png','tn3.png','tn4.png '])"
+           alt="TechNest Preview">
+
+      <div class="project-content">
+        <h3>TechNest</h3>
+        <p>
+          A home rental system, where property owners can post their properties and tenants can browse through, conatct and book the properties. 
+          The site also provides features for online rent payments. Admin can manage and montior all the activities in the site.
+        </p>
+        <span class="tech-stack">PHP • HTML • CSS • JavaScript • MySQL</span>
+      </div>
+    </div>
+
+    <!-- Project Card 3 -->
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='images/rv1.png') }}"
+           class="project-preview"
+           onclick="openGallery(['rv1.png','rv2.png','rv3.png','rv4.png'])"
+           alt="PharmaSense Preview">
+
+      <div class="project-content">
+        <h3>ReadVerse</h3>
+        <p>
+          ReadVerse is a simple online book store web application where users can browse books, view details, and add items to a cart or wishlist. 
+          It is built using HTML, CSS, and JavaScript, with Local Storage used to save user selections.
+        </p>
+        <span class="tech-stack">HTML • CSS • Local Storage • Bootstrap</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- Reusable Modal -->
+<div id="galleryModal" class="gallery-modal" onclick="closeOnOutside(event)">
+  <span class="close" onclick="closeGallery()">&times;</span>
+  <div class="gallery-content" id="galleryImages"></div>
+</div>
+
+
+
+<section id="education" class="education-section">
+  <h2 class="edu-title">Education</h2>
+
+  <div class="edu-timeline">
+
+    <div class="edu-card">
+      <span class="edu-dot"></span>
+      <div class="edu-content">
+        <h3>MCA – Master of Computer Applications</h3>
+        <span class="edu-year">2025 – Present</span>
+        <ul>
+          <li>Coursework: Data Structures, Web Development, DBMS, OOP</li>
+          <li>Focus: Full-stack & Backend Development</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <span class="edu-dot"></span>
+      <div class="edu-content">
+        <h3>BCA – Bachelor of Computer Applications</h3>
+        <span class="edu-year">2022 – 2025</span>
+        <ul>
+          <li>Projects: TechNest Rentals, ToyTrove E-commerce</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <span class="edu-dot"></span>
+      <div class="edu-content">
+        <h3>Higher Secondary Education (HSE)</h3>
+        <span class="edu-year">2020 – 2022</span>
+        <ul>
+          <li>Assisi Vidyaniketan Public School</li>
+          <li>Stream: Bio-Informatics</li>
+          <li>Score: 92.6%</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="edu-card">
+      <span class="edu-dot"></span>
+      <div class="edu-content">
+        <h3>Secondary Education</h3>
+        <span class="edu-year">2020</span>
+        <ul>
+          <li>Assisi Vidyaniketan Public School</li>
+          <li>Score: 94.6%</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!--CERTIFICATIONS SESSION-->
+<section id="certifications">
+    <h2>Certifications</h2>
+
+    <div class="cert-container">
+
+        <div class="cert-card">
+            <img src="{{ url_for('static', filename='images/mPower.jpeg') }}" alt="mPower" onclick="openPopup(this.src)">
+            <h3>MPower Persona Enhancement Program</h3>
+            <p class="issuer">Vertical Eye • 2025</p>
+        </div>
+
+        <div class="cert-card">
+            <img src="{{ url_for('static', filename='images/AI1.jpg') }}" alt="AI Summit" onclick="openPopup(this.src)">
+            <h3>Prompt Engineering Workshop</h3>
+            <p class="issuer">AccelerateX • 2024</p>
+        </div>
+
+        <div class="cert-card">
+            <img src="{{ url_for('static', filename='images/AI2.jpg') }}" alt="AI Summit" onclick="openPopup(this.src)">
+            <h3>Internship Certificate</h3>
+            <p class="issuer">AccelerateX • 2024</p>
+        </div>
+
+        <div class="cert-card">
+            <img src="{{ url_for('static', filename='images/AI3.png') }}" alt="AI Summit" onclick="openPopup(this.src)">
+            <h3>AI Builders Lab</h3>
+            <p class="issuer">AccelerateX • 2024</p>
+        </div>
+
+        <div class="cert-card">
+            <img src="{{ url_for('static', filename='images/robotics.jpeg') }}" alt="AI Summit" onclick="openPopup(this.src)">
+            <h3>Robotics</h3>
+            <p class="issuer">RCMAS • 2024</p>
+        </div>
+
+        <div class="cert-card">
+            <img src="{{ url_for('static', filename='images/python.jpeg') }}" alt="AI Summit" onclick="openPopup(this.src)">
+            <h3>Advanced Python for Data Analysis</h3>
+            <p class="issuer">RCMAS • 2024</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- ACHIEVEMENTS SECTION -->
+<section id="achievements">
+    <h2>Achievements</h2>
+
+    <div class="achievements-container">
+
+        <div class="achievement-card">
+            <img src="{{ url_for('static', filename='images/Rank.jpeg') }}" alt="Rank Certificate" onclick="openPopup(this.src)">
+            <h3>5th Rank Holder - MG University</h3>
+            <p>Recognized for outstanding academic performance during undergraduate studies.</p>
+        </div>
+
+        <!-- Add more achievement cards here if needed -->
+
+    </div>
+</section>
+
+
+<!-- 🔥 Popup for Enlarged Image -->
+<div id="imgPopup" class="popup" onclick="closePopup()">
+    <img id="popupImg">
+</div>
+
+  <!-- CONTACT SECTION -->
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Let's connect!</p>
+    <a href="mailto:athirakbinu@gmail.com">Email</a>
+    <a href="https://www.linkedin.com/in/athira-binu-263745372/">LinkedIn</a>
+    <a href="https://github.com/athubin">GitHub</a>
+  </section>
+<script>
+  function openGallery(images) {
+    const gallery = document.getElementById("galleryImages");
+    gallery.innerHTML = "";
+
+    images.forEach(img => {
+      const imageElement = document.createElement("img");
+      imageElement.src = `/static/images/${img}`;
+      gallery.appendChild(imageElement);
+    });
+
+    document.getElementById("galleryModal").style.display = "flex";
+  }
+
+  function closeGallery() {
+    document.getElementById("galleryModal").style.display = "none";
+  }
+
+  function closeOnOutside(e) {
+    if (e.target.id === "galleryModal") {
+      closeGallery();
+    }
+  }
+</script>
+
+
+
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>
