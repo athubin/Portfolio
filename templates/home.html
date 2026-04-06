@@ -101,6 +101,9 @@
       <h3>Databases</h3>
       <div class="skills-grid">
         <div class="skill-box"><i class="fa-solid fa-database"></i> MySQL</div>
+        <div class="skill-box"><i class="fa-solid fa-database"></i> SQLite</div>
+        <div class="skill-box"><i class="fa-solid fa-database"></i> PostgreSQL</div>
+        <div class="skill-box"><i class="fa-solid fa-database"></i> MS Access</div>
       </div>
     </div>
 
@@ -110,6 +113,7 @@
         <div class="skill-box"><i class="fa-brands fa-git-alt"></i> Git</div>
         <div class="skill-box"><i class="fa-brands fa-github"></i> GitHub</div>
         <div class="skill-box"><i class="fa-solid fa-code"></i> VS Code</div>
+        <div class="skill-box"><i class="fa-brands fa-java"></i> NetBeans</div>
       </div>
     </div>
   </div>
@@ -174,6 +178,39 @@
       </div>
     </div>
 
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='images/ms1.png') }}"
+           class="project-preview"
+           onclick="openGallery(['ms1.png','ms2.png','ms3.png','ms4.png'])"
+           alt="MedSnap Preview">
+
+      <div class="project-content">
+        <h3>MedSnap</h3>
+        <p>
+          Developed a web application to upload prescriptions and automatically extract medicine names using text processing. 
+          The system displays the availability status of medicines, 
+          helping reduce manual effort and making the process faster and easier.
+        </p>
+        <span class="tech-stack">Django • HTML • CSS • JS • SQLite • EasyOCR</span>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='images/avms1.png') }}"
+           class="project-preview"
+           onclick="openGallery(['avms1.png','avms2.png','avms3.png','avms4.png'])"
+           alt="MedSnap Preview">
+
+      <div class="project-content">
+        <h3>Apartment Visitor Management System</h3>
+        <p>
+          Developed a simple Java-based application using NetBeans to record and manage visitor details for an apartment.
+          The system helps track entries and exits efficiently, reducing manual effort and making visitor management easier.
+        </p>
+        <span class="tech-stack">Java • NetBeans</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -197,7 +234,7 @@
         <span class="edu-year">2025 – Present</span>
         <ul>
           <li>Rajagiri College of Social Sciences, Kalamassery</li>
-          <li>Coursework: Data Structures, Web Development, DBMS, OOP</li>
+          <li>Coursework: Data Structures, Web Development, DBMS, OOP, Java</li>
           <li>Focus: Full-stack & Backend Development</li>
         </ul>
       </div>
@@ -300,6 +337,12 @@
             <img src="{{ url_for('static', filename='images/Rank.jpeg') }}" alt="Rank Certificate" onclick="openPopup(this.src)">
             <h3>5th Rank Holder - MG University</h3>
             <p>Recognized for outstanding academic performance during undergraduate studies.</p>
+        </div>
+
+        <div class="achievement-card">
+            <img src="{{ url_for('static', filename='images/Cameo-Hackathon.png') }}" alt="Hackathon Certificate" onclick="openPopup(this.src)">
+            <h3>Hackathon - Nirmala College Muvattupuzha</h3>
+            <p>Collaborated in a team to develop a Community Event Volunteer System to connect volunteers with events under time constraints</p>
         </div>
 
         <!-- Add more achievement cards here if needed -->
