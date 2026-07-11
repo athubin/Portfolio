@@ -211,6 +211,22 @@
       </div>
     </div>
 
+    <div class="project-card">
+      <img src="{{ url_for('static', filename='images/s1.png') }}"
+           class="project-preview"
+           onclick="openGallery(['s1.png','s2.png','s3.png','s4.png'])"
+           alt="MedSnap Preview">
+
+      <div class="project-content">
+        <h3>Spendly - Expense Tracker</h3>
+        <p>
+          Developed a Django-based web application to manage personal expenses, set monthly budgets,
+          categorize transactions, and visualize spending trends with interactive charts.
+        </p>
+        <span class="tech-stack">Django • HTML • CSS • JS • SQLite</span>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -289,6 +305,12 @@
     <div class="cert-container">
 
         <div class="cert-card">
+            <img src="{{ url_for('static', filename='images/CareerEssentialsAI.png') }}" alt="mPower" onclick="openPopup(this.src)">
+            <h3>Career Essentials in Generative AI</h3>
+            <p class="issuer">LinkedIn Learning • 2026</p>
+        </div>
+
+        <div class="cert-card">
             <img src="{{ url_for('static', filename='images/mPower.jpeg') }}" alt="mPower" onclick="openPopup(this.src)">
             <h3>MPower Persona Enhancement Program</h3>
             <p class="issuer">Vertical Eye • 2025</p>
@@ -334,15 +356,31 @@
     <div class="achievements-container">
 
         <div class="achievement-card">
-            <img src="{{ url_for('static', filename='images/Rank.jpeg') }}" alt="Rank Certificate" onclick="openPopup(this.src)">
-            <h3>5th Rank Holder - MG University</h3>
-            <p>Recognized for outstanding academic performance during undergraduate studies.</p>
+          <img src="{{ url_for('static', filename='images/bca-3-5.jpeg') }}" alt="BCA Semester 3 & 5 Topper" onclick="openPopup(this.src)">
+          <h3>BCA Semester 3 & 5 topper - RCMAS</h3>
+          <span class="achievement-date">2025</span>
+          <p>Recognized for securing the highest marks in BCA Semesters 3 and 5, demonstrating consistent academic excellence.</p>
+        </div>
+
+        <div class="achievement-card">
+          <img src="{{ url_for('static', filename='images/Rank.jpeg') }}" alt="Rank Certificate" onclick="openPopup(this.src)">
+          <h3>5th Rank Holder - MG University</h3>
+          <span class="achievement-date">2025</span>
+          <p>Recognized for securing 5th Rank in the Bachelor of Computer Applications (BCA) program under Mahatma Gandhi University.</p>
         </div>
 
         <div class="achievement-card">
             <img src="{{ url_for('static', filename='images/Cameo-Hackathon.png') }}" alt="Hackathon Certificate" onclick="openPopup(this.src)">
             <h3>Hackathon - Nirmala College Muvattupuzha</h3>
+            <span class="achievement-date">2025</span>
             <p>Collaborated in a team to develop a Community Event Volunteer System to connect volunteers with events under time constraints</p>
+        </div>
+
+        <div class="achievement-card">
+            <img src="{{ url_for('static', filename='images/mca-s2.jpeg') }}" alt="MCA Sem 2 Topper" onclick="openPopup(this.src)">
+            <h3>MCA Semester 2 topper - RCSS</h3>
+            <span class="achievement-date">2026</span>
+            <p>Awarded Academic Excellence for securing the highest marks in Semester 2 at Rajagiri College of Social Sciences.</p>
         </div>
 
         <!-- Add more achievement cards here if needed -->
